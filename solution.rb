@@ -1,9 +1,9 @@
 require 'sinatra'
 
-get '/' do
+get '/makers/:nombre' do
   if params[:nombre] == nil || params[:nombre] == "" || params[:nombre] == []
     "Hola desconocido!"
   else
-    "Hola #{params[:nombre]}!"
+    "Hola"+" #{params[:nombre].capitalize}!"
   end
 end
