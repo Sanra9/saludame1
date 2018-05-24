@@ -1,5 +1,5 @@
 
-<p>HcUy6Re2LLBRtj</p>
+<!-- <p>HcUy6Re2LLBRtj</p> -->
 
 
 <!-- <!DOCTYPE html>
@@ -18,3 +18,14 @@
 </form>
 </body>
 </html> -->
+
+
+<h2>Hola</h2>
+<% @array.each do |n| %>
+ <br>
+  <% if n.odd? %>
+  <%= n.to_s + " Soy impar!" %>
+  <% else %>
+  <%= n.to_s + " Soy par!" %>
+  <%end %>
+<% end %>
