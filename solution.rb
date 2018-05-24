@@ -7,3 +7,10 @@ get '/makers/:nombre' do
     "Hola"+" #{params[:nombre].capitalize}!"
   end
 end
+get '/' do
+  erb :index
+end
+
+post '/saludo' do
+  "Hola #{params[:nombre]}!"
+end
