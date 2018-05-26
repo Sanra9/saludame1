@@ -2,7 +2,7 @@
 <!-- <p>HcUy6Re2LLBRtj</p> -->
 
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -10,22 +10,19 @@
     <title>Lista De Tareas</title>
   </head>
   <body>
-    <h1>Hola dime a quién saludar</h1>
-<form class="" action="/saludo" method="post">
-  <label for="name"> <input type="text" id="nombre" name="nombre" value=""> </label>
-    <input type="submit" name="" value=""> <button type="submit" class="btn btn-success">Saluda</button>
+        <% if @num %>
+          <h1>Mi cuenta es: <%= @num %></h1>
+        <% else  %>
+          <h1>Mi cuenta es: 0</h1>
+          <% @num = 0 %>
+        <% end %>
+
+<form action="/">
+  <div class="checkbox">
+    <input type="hidden" value= "<%= @num.to_i + 1 %>" name="num">
+    <button type="submit" class="btn btn-success" value="suma">¡Suma!</button>
   </div>
 </form>
 </body>
-</html> -->
 
-
-<h2>Hola</h2>
-<% @array.each do |n| %>
- <br>
-  <% if n.odd? %>
-  <%= n.to_s + " Soy impar!" %>
-  <% else %>
-  <%= n.to_s + " Soy par!" %>
-  <%end %>
-<% end %>
+</html>

@@ -1,9 +1,22 @@
 require 'sinatra'
+require 'pry'
+
+
+
 
 get '/' do
-  @array=num=1..50
+	@num = params[:num]
   erb :index
 end
+
+
+
+
+
+# get '/' do
+#   # @array=num=1..50
+#   # erb :index
+# end
 
 # get '/makers/:nombre' do
 #   if params[:nombre] == nil || params[:nombre] == "" || params[:nombre] == []
